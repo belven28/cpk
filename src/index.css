@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Dynamic Palette mapped to CSS variables */
+  --color-kaguya-gold: var(--kaguya-gold);       /* Primary theme accent gold/light */
+  --color-kaguya-pink: var(--kaguya-pink);       /* Theme-specific primary identity signifier */
+  --color-kaguya-green: var(--kaguya-green);      /* Sourcing sub-accent color */
+  --color-kaguya-navy: var(--kaguya-navy);       /* General page dark canvas background */
+  --color-kaguya-indigo: var(--kaguya-indigo);     /* Badge & controls theme accent */
+  --color-kaguya-cream: var(--kaguya-cream);      /* Beautiful parchment tone text */
+}
+
+:root {
+  --kaguya-gold: #fcc132;       /* Princess Solar Yellow */
+  --kaguya-pink: #ef4444;       /* Traditional Kaguya Saffron Red */
+  --kaguya-green: #eab308;      /* Amber Yellow */
+  --kaguya-navy: #0d0205;       /* Lacquer Blackish-Crimson */
+  --kaguya-indigo: #f43f5e;     /* High-vis Pinkish Red */
+  --kaguya-cream: #ffe6aa;      /* Soft solar cream text */
+  --kaguya-panel: #160408;      /* Panel container */
+  --kaguya-border: #350811;     /* Contrast lacquer border */
+  --kaguya-text: #ffe6aa;
+  --kaguya-muted: #fca5a5;
+  --kaguya-form-bg: #110204;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Cosmic glows & Ghibli watercolor styling */
+.gold-glow {
+  text-shadow: 0 0 12px rgba(245, 188, 63, 0.45);
+}
+.pink-glow {
+  text-shadow: 0 0 12px rgba(244, 114, 182, 0.4);
+}
+.green-glow {
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.4);
+}
+
+.title-glow {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+}
+.title-glow:hover {
+  text-shadow: 0 0 12px rgba(245, 188, 63, 0.35);
+}
+
+/* Animations and starry glows */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle infinite ease-in-out;
+}
+
+/* Custom scrollbar for an anime dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060913;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #deb887; /* burlywood gold */
+}
+
