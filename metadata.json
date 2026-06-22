@@ -1,6 +1,0 @@
-{
-  "name": "Kaguya Anime Merch Tracker",
-  "description": "Track your Cosmic Princess Kaguya anime merchandise purchases. Enter items or product links from Taobao, Tsutaya Bookstore, or other stores to automatically analyze details and prices in MYR.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
